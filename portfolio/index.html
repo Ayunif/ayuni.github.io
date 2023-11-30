@@ -1,0 +1,215 @@
+<!DOCTYPE html> 
+<html lang= "en">
+<head>
+    <meta charset="UTF-8">
+	<meta http-equiv= "X-UA-compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<title>Personal Portfolio Website</title>
+	<link rel="stylesheet" href="style.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/css/lightbox.min.css" />
+
+</head>
+<body>
+<section id="header">
+     <div class="container">
+	      <nav>
+		  <img src="unisaza.jpg" class="logo">
+		  <ul id="sidemenu">
+		    <li><a href="#header">Home</a></li>
+            <li><a href="#about">About</a></li>
+			<li><a href="#portfolio">Portfolio</a></li>
+	        <li><a href="#Contact">Contact</a></li>
+			<i class="fas fa-times" onclick="closemenu()"></i>
+		 </ul>
+		 <i class="fas fa-bars" onclick="openmenu()"></i>
+		</nav>
+		<div class="header-text">
+		     <p>UniSZa Student</P> 
+			 <h1> Hi, I'm <span>Fatin Ayuni</span> </h1>
+    </div>
+</div>
+</section>
+<!-- -----------about------------- -->
+
+<section id="about">
+     <div class="container">
+	     <div class="row">
+		     <div class="about-col-1">
+			     <div class="about-col-1">
+                     <img src="hiking.jpg" class="medium-image" alt="Profile Image">
+                 </div>
+
+			 </div>
+		     <div class="about-col-2">
+			     <h1 class="sub-title">About Me</h1>
+				 <p>Hi, I’m Fatin Ayuni Hassan Sanusi! I’m a native of Pahang. Welcome to my digital space! 
+				 I hold a Bachelor’s Degree in Information Technology, Informatic Media with Honours from University Sultan Zainal Abidin, Terengganu. 
+				 Outside of the digital realm, I enjoy taking pictures of nature that surrounds me. I also enjoy spending time with friends and family 
+				 when I have free time, doing activities such as hiking, kayaking, and others. By doing all these activities, I find it easier to get 
+				 interesting and diverse experiences and inspirations. I aspire to become a animator because painting is also one of my hobbies. 
+				 Thank you for taking the time to learn more about me. 
+				 I am always interested in connecting with like-minded individuals, so don’t hesitate to contact and say hello! 
+				 If you have free time, please watch the video I provided.
+				 “I hope you all enjoyed it.”</p>
+				 
+				<div class="video-container" style="margin-bottom: 20px;">
+				  <iframe width="560" height="315" src="my vlog.mp4" frameborder="0" allowfullscreen></iframe>
+	         </div>
+		 </div>
+	</div>
+</section>		 
+
+
+
+
+<!-- portfolio section -->
+
+<section id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">Projects</h1>
+        <div id="work-list">
+            <div class="work">
+                <img src="galery.jpg" alt="NatureLens Gallery">
+                <div class="layer">
+                    <h3>NatureLens Gallery</h3>
+                    <p>Build a web gallery to showcase your nature photography.</p>
+                    <a href="https://www.naturescapes.net/galleries/"  target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="blog 1.jpg" alt="Nature Explorer Journal">
+                <div class="layer">
+                    <h3>Nature Explorer Journal</h3>
+                    <p>Create a blog to share experiences and stories related to nature photography.</p>
+                    <a href="https://dailywildlifephoto.nathab.com/photography-guide/blog/"  target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="naturegram1.jpg" alt="NatureGram">
+                <div class="layer">
+                    <h3>NatureGram</h3>
+                    <p>Develop a web app that functions similarly to Instagram but specifically for nature enthusiasts.</p>
+                    <a href="https://www.instagram.com/explore/tags/naturegram?igshid=NTc4MTIwNjQ2YQ=="  target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+		<a href="#" class="btn">See more</a>
+    </div>
+</section>
+
+<!-- --------Contact------- -->
+<section id="Contact">
+     <div class="container">
+	    <div class="row">
+		    <div class="Contact-left">
+		    <h1 class="sub-title">Contact Me</h1>
+			<p><i class="far fa-paper-plane"></i>ayunif17@gmail.com</p>
+			<p><i class="fas fa-phone-square"></i>011-65604286</p>
+
+			<div class="social-icons">
+                 <a href="https://facebook.com/"><i class="fab fa-facebook"></i></a>
+                 <a href="https://twitter.com/"><i class="fab fa-twitter"></i></a>
+				 <a href="https://instagram.com/fatin_ayuni_?igshid=MzNlNGNkZWQ4Mg=="><i class="fab fa-instagram"></i></a>
+            </div>
+			
+
+		</div>
+        <div class="contact-right">
+             <form name="submit-to-google-sheet">
+                 <input type="text"  name="Name" placeholder="Your Name" required>
+				 <input type="email"  name="email" placeholder="Your Email" required>
+				 <textarea  name="Message" rows="6" placeholder="Your Message"></textarea>
+				 <button type="submit" class="btn btn2">Submit</button>
+            </form>
+            <span id="msg" ></span></span>
+        </div>
+	 </div>
+</section>
+
+<script>
+    function openmenu() {
+        document.getElementById("sidemenu").style.right = "0";
+    }
+
+    function closemenu() {
+        document.getElementById("sidemenu").style.right = "-200px";
+    }
+
+    // JavaScript to toggle the navigation menu
+    document.addEventListener('DOMContentLoaded', function () {
+        const menuIcon = document.querySelector('.fas.fa-bars');
+        const closeIcon = document.querySelector('.fas.fa-times');
+        const navMenu = document.getElementById('sidemenu');
+
+        menuIcon.addEventListener('click', function () {
+            openmenu();
+        });
+
+        closeIcon.addEventListener('click', function () {
+            closemenu();
+        });
+    });
+</script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.1/js/lightbox.min.js"></script>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        // Initialize Lightbox
+        lightbox.option({
+            'resizeDuration': 200,
+            'wrapAround': true
+        });
+
+        // Your existing JavaScript code for handling clicks on work items and "See more" button
+        const workList = document.getElementById('work-list');
+        const seeMoreButton = document.querySelector('.btn');
+
+        // Add click event listener to each work item
+        workList.addEventListener('click', function (event) {
+            const targetWork = event.target.closest('.work');
+
+            if (targetWork) {
+                // Open Lightbox when a work item is clicked
+                const workImage = targetWork.querySelector('img');
+                lightbox.open([{
+                    src: workImage.src,
+                    caption: targetWork.querySelector('h3').innerText
+                }]);
+            }
+        });
+
+        // Add click event listener to the "See more" button
+        seeMoreButton.addEventListener('click', function (event) {
+            // Handle the click on the "See more" button (you can customize this part)
+            alert('See more button clicked');
+        });
+    });
+</script>
+
+
+
+
+<script>
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbzTD9SWjcBUJ3mUY75r-H6WiTJftEueFaum0-viJayNtZYZGQHMbrROGIAfBnenteFIqQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+  const msg = document.getElementById("msg")
+
+  form.addEventListener('submit', e => {
+    e.preventDefault()
+    fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+      .then(response =>{
+	       msg.innerHTML = "Message sent successfully"
+           setTimeout(function(){
+              msg.innerHTML = ""		   
+	  },5000)
+	  form.reset()
+	  })
+      .catch(error => console.error('Error!', error.message))
+  })
+</script>
+
+</body>
+</html>
+
